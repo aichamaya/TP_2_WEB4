@@ -1,6 +1,6 @@
-const User = require("../models/User");
-const Campsite = require("../models/Campsite");
-const Reservation = require("../models/Reservation");
+const User = require("../models/user");
+const Campsite = require("../models/campsite");
+const Reservation = require("../models/reservation");
 const mongoose = require("mongoose");
 
 const seedDatabase = async (req, res) => {

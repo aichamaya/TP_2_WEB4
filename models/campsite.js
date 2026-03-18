@@ -1,21 +1,39 @@
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
+import { Schema,model } from "mongoose";
 
-const campsiteSchema = new mongoose.Schema(
+const campsiteSchema = new Schema(
   {
-    name: { type: String },
-    location: { type: String },
+    name: { type: String,
+    required:[true,"Le nom est obligatoire"],
+     },
+    location: { type: String,
+       required:[true,"La location est obligatoire"],
+     },
     description: { type: String },
     type: {
       type: String,
-      enum: ["tente", "rv", "chalet", "glamping", "arrière-pays", "autre"],
+      enum: ["tent", "rv", "cabin", "glamping", "backcountry"],
     },
-    pricePerNight: { type: Number },
-    capacity: { type: Number },
-    maxVehicleLength: {
-      type: Number,
-    }, // in meters, required for RV sites
+    pricePerNight: { type: Number, 
+    required:[true,"Le prix est obligatoire"],
+    min:[1,"le prix doit être un nombre positif supérieur à 0"]
+    },
+
+    maxVehicleLength: { type: Number,
+    min:[1,"le prix doit être un nombre positif supérieur à 0"],
+    required:[true,"Le nombre est obligatoire"],//requis si type =rv
+
+     },
+
+    capacity: { type: Number ,
+      min:[1,"le prix doit être un nombre positif supérieur à 0"],
+       required:[true,"Le nombre doit être positif"],
+     
+    },
+    
     amenities: {
       type: [String],
+      required : false,
       enum: [
         "électricité",
         "eau",

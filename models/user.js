@@ -8,12 +8,20 @@ const regexPhone = /[0-9]/;
 
 const userSchema = new mongoose.Schema(
   {
-    username:{type: String,
-      unique:[true,"ce nom d'utilisateur existe déja"],
-      required :[true,"le nom d'utilisateur est obligatoire"],
-      trim:true,
+    // username:{type: String,
+    //   unique:[true,"ce nom d'utilisateur existe déja"],
+    //   required :[true,"le nom d'utilisateur est obligatoire"],
+    //   trim:true,
 
-    },
+    // },
+    firstName: { type: String,
+     required:[true,"Le nom est obligatoire"],
+
+      },
+    lastName: { type: String,
+       required:[true,"Le prénom est obligatoire"],
+     }, 
+    
      email: { type: String,
      unique:[true,"L'adresse courriel est déja utilisé"],
      match:[regexCourriel, "le format de l'adresse courriel est invalid"],
@@ -37,9 +45,7 @@ const userSchema = new mongoose.Schema(
 
     },
 
-    firstName: { type: String },
-    lastName: { type: String }, 
-    
+   
   },
   { timestamps: true },
 
