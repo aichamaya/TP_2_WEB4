@@ -1,14 +1,16 @@
 import express from "express";
 import * as campsiteController from "../controllers/campsiteController.mjs";
-import { auth } from "../middleware/auth.mjs";
+import { auth, adminOnly } from "../middleware/auth.mjs";
 
 const router = express.Router();
 
+// 🔹 Routes publiques
 router.get("/", campsiteController.getAllCampsites);
 router.get("/:id", campsiteController.getCampsiteById);
+
+// 🔹 Routes protégées (admin seulement)
 router.post("/", auth, adminOnly, campsiteController.createCampsite);
-router.post("/", auth, campsiteController.createCampsite);
-router.put("/:id", auth, campsiteController.updateCampsite);
-router.delete("/:id", auth, campsiteController.deleteCampsite);
+router.put("/:id", auth, adminOnly, campsiteController.updateCampsite);
+router.delete("/:id", auth, adminOnly, campsiteController.deleteCampsite);
 
 export default router;
