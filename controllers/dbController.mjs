@@ -1,7 +1,8 @@
-const User = require("../models/user");
-const Campsite = require("../models/campsite");
-const Reservation = require("../models/reservation");
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+
+import User from "../models/user.mjs"; 
+import Campsite from "../models/campsite.mjs";
+import Reservation from "../models/reservation.mjs";
 
 const seedDatabase = async (req, res) => {
   try {
@@ -10,14 +11,6 @@ const seedDatabase = async (req, res) => {
     await Campsite.deleteMany({});
     await Reservation.deleteMany({});
 
-    // Drop old username index if it exists
-    try {
-      await User.collection.dropIndex("username_1");
-    } catch (e) {
-      // Index might not exist, ignore
-    }
-
-    // Define fixed IDs for predictable testing
     const userIds = [
       new mongoose.Types.ObjectId("507f1f77bcf86cd799439011"), // admin
       new mongoose.Types.ObjectId("507f1f77bcf86cd799439012"), // user1
@@ -116,7 +109,6 @@ const seedDatabase = async (req, res) => {
       await user.save();
     }
 
-    // Create campsites of different types (noms en français, secteurs/zones du camping)
     const campsites = [
       {
         _id: campsiteIds[0],
@@ -398,12 +390,10 @@ const seedDatabase = async (req, res) => {
       await reservation.save();
     }
 
-    res
-      .status(200)
-      .json({
-        message:
-          "Database seeded successfully with users, campsites, and reservations",
-      });
+    res.status(200).json({
+      message:
+        "Database seeded successfully with users, campsites, and reservations",
+    });
   } catch (e) {
     res
       .status(500)
@@ -411,4 +401,4 @@ const seedDatabase = async (req, res) => {
   }
 };
 
-module.exports = { seedDatabase };
+export { seedDatabase };

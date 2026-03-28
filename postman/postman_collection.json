@@ -1,11 +1,10 @@
 {
   "info": {
-    "_postman_id": "84eb7665-6a98-4eca-a9cf-6df6105c6689",
+    "_postman_id": "dac81c46-ec39-44e3-8d76-252a0c647682",
     "name": "420-14B-FX-H26-TP2 - Camping API",
     "description": "Collection complète pour tester l'API de gestion de camping avec authentification JWT",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "2729035",
-    "_collection_link": "https://go.postman.co/collection/2729035-84eb7665-6a98-4eca-a9cf-6df6105c6689?source=collection_link"
+    "_exporter_id": "2729035"
   },
   "item": [
     {
@@ -64,21 +63,20 @@
           ],
           "request": {
             "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "{{admin_token}}",
-                  "type": "string"
-                }
-              ]
+              "type": "noauth"
             },
             "method": "POST",
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/db/seed",
-              "host": ["{{base_url}}"],
-              "path": ["api", "db", "seed"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "db",
+                "seed"
+              ]
             }
           },
           "response": []
@@ -157,8 +155,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -200,8 +204,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -243,8 +253,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -286,8 +302,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -329,8 +351,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -372,8 +400,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -415,8 +449,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -458,8 +498,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -501,8 +547,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -544,8 +596,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -587,8 +645,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -630,8 +694,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -673,8 +743,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -716,8 +792,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -759,8 +841,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "register"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
@@ -802,8 +890,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/login",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "login"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             }
           },
           "response": []
@@ -839,8 +933,8 @@
                   "    pm.expect(jsonData.data).to.have.property('user');",
                   "    const user = jsonData.data.user",
                   "    pm.expect(user).to.have.jsonSchema(jsonSchemaUser);",
-                  "    pm.environment.set(\"user_id\", user._id);",
-                  "    pm.environment.set(\"user_token\", jsonData.data.token);",
+                  "    pm.collectionVariables.set(\"user_id\", user._id);",
+                  "    pm.collectionVariables.set(\"user_token\", jsonData.data.token);",
                   "});"
                 ],
                 "type": "text/javascript",
@@ -863,8 +957,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/login",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "login"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             }
           },
           "response": []
@@ -901,7 +1001,7 @@
                   "    const user = jsonData.data.user",
                   "    pm.expect(user).to.have.jsonSchema(jsonSchemaUser);",
                   "    //pm.environment.set(\"user_id\", user._id);",
-                  "    pm.environment.set(\"admin_token\", jsonData.data.token);",
+                  "    pm.collectionVariables.set(\"admin_token\", jsonData.data.token);",
                   "});"
                 ],
                 "type": "text/javascript",
@@ -924,8 +1024,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/login",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "login"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             }
           },
           "response": []
@@ -968,8 +1074,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/login",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "login"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             }
           },
           "response": []
@@ -1007,12 +1119,18 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"\",\n  \"password\": \"password123\"\n}"
+              "raw": "{\n  \"email\": \" \",\n  \"password\": \"password123\"\n}"
             },
             "url": {
               "raw": "{{base_url}}/api/auth/login",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "login"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             }
           },
           "response": []
@@ -1054,8 +1172,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/login",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "login"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             }
           },
           "response": []
@@ -1097,8 +1221,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/login",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "login"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             }
           },
           "response": []
@@ -1140,8 +1270,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/login",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "login"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             }
           },
           "response": []
@@ -1197,8 +1333,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/auth/profile",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "profile"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "profile"
+              ]
             }
           },
           "response": []
@@ -1235,8 +1377,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/auth/profile",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "profile"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "profile"
+              ]
             }
           },
           "response": []
@@ -1282,8 +1430,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/profile",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "profile"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "profile"
+              ]
             }
           },
           "response": []
@@ -1362,8 +1516,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/profile",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "profile"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "profile"
+              ]
             }
           },
           "response": []
@@ -1415,8 +1575,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/profile",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "profile"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "profile"
+              ]
             }
           },
           "response": []
@@ -1468,8 +1634,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/profile",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "profile"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "profile"
+              ]
             }
           },
           "response": []
@@ -1521,8 +1693,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/profile",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "profile"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "profile"
+              ]
             }
           },
           "response": []
@@ -1574,8 +1752,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/profile",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "profile"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "profile"
+              ]
             }
           },
           "response": []
@@ -1617,8 +1801,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/password",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "password"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "password"
+              ]
             }
           },
           "response": []
@@ -1672,8 +1862,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/password",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "password"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "password"
+              ]
             }
           },
           "response": []
@@ -1725,8 +1921,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/password",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "password"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "password"
+              ]
             }
           },
           "response": []
@@ -1778,8 +1980,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/password",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "password"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "password"
+              ]
             }
           },
           "response": []
@@ -1831,8 +2039,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/password",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "password"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "password"
+              ]
             }
           },
           "response": []
@@ -1884,8 +2098,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/password",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "password"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "password"
+              ]
             }
           },
           "response": []
@@ -1937,8 +2157,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/auth/password",
-              "host": ["{{base_url}}"],
-              "path": ["api", "auth", "password"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "password"
+              ]
             }
           },
           "response": []
@@ -1966,11 +2192,7 @@
                   "    pm.response.to.have.jsonSchema(schema);",
                   "});",
                   "",
-                  "pm.test(\"Campsite created\", function () {",
-                  "    var jsonData = pm.response.json();",
-                  "    pm.expect(jsonData.data).to.have.property('_id');",
-                  "   ",
-                  "});",
+                  "",
                   "",
                   "// Récupération depuis les variables de collection",
                   "const jsonSchemaCampsite = JSON.parse(",
@@ -1989,7 +2211,7 @@
                   "const requestBody = JSON.parse(pm.request.body.raw);",
                   "const responseCampsite = pm.response.json().data;",
                   "",
-                  "[\"name\", \"location\", \"description\",\"type\", \"pricePerNight\",\"capacity\", \"maxVehiculeLenght\", \"amenities\"].forEach(field => {",
+                  "[\"name\", \"location\", \"description\",\"type\", \"pricePerNight\",\"capacity\", \"maxVehiculeLenght\"].forEach(field => {",
                   "    pm.test(`${field} matches request`, function () {",
                   "        pm.expect(responseCampsite[field])",
                   "            .to.eql(requestBody[field]);",
@@ -2032,8 +2254,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2078,8 +2305,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2131,8 +2363,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2184,8 +2421,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2237,8 +2479,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2290,8 +2537,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2343,8 +2595,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2396,8 +2653,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2449,8 +2711,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2502,8 +2769,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2555,8 +2827,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2604,12 +2881,17 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Test Site\",\n  \"location\": \"Test\",\n  \"pricePerNight\": -10\n}"
+              "raw": "{\n  \"name\": \"Emplacement tente Lac C\",\n  \"location\": \"Secteur Lac - Rive nord\",\n  \"description\": \"{{$randomLoremParagraph}}\",\n  \"type\": \"tente\",\n  \"capacity\": 6,\n  \"amenities\": [\"électricité\", \"eau\"]\n}"
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2621,8 +2903,8 @@
               "listen": "test",
               "script": {
                 "exec": [
-                  "pm.test(\"Status code is 400\", function () {",
-                  "    pm.response.to.have.status(400);",
+                  "pm.test(\"Status code is 422\", function () {",
+                  "    pm.response.to.have.status(422);",
                   "});",
                   "",
                   "const errorSchema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaErrorResponse\"));",
@@ -2657,12 +2939,17 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Test Site\",\n  \"location\": \"Test\",\n  \"pricePerNight\": -10\n}"
+              "raw": "{\n  \"name\": \"Emplacement tente Lac C\",\n  \"location\": \"Secteur Lac - Rive nord\",\n  \"description\": \"{{$randomLoremParagraph}}\",\n  \"type\": \"tente\",\n  \"pricePerNight\": -40.00,\n  \"capacity\": 6,\n  \"amenities\": [\"électricité\", \"eau\"]\n}"
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2710,18 +2997,23 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"{{$randomLoremWord}}\",\n  \"location\": \"{{$randomLoremWords}}\",\n  \"description\": \"{{$randomLoremParagraph}}\",\n  \"pricePerNight\": 40.00,\n  \"amenities\": [\"électricité\", \"eau\"]\n}"
+              "raw": "{\n  \"name\": \"Emplacement tente Lac C\",\n  \"location\": \"Secteur Lac - Rive nord\",\n  \"description\": \"{{$randomLoremParagraph}}\",\n  \"type\": \"tente\",\n  \"pricePerNight\": 40.00,\n  \"amenities\": [\"électricité\", \"eau\"]\n}"
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
         },
         {
-          "name": "/api/campsites (capacity vide)",
+          "name": "/api/campsites (capacity 0)",
           "event": [
             {
               "listen": "test",
@@ -2763,25 +3055,30 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"{{$randomLoremWord}}\",\n  \"location\": \"{{$randomLoremWords}}\",\n  \"description\": \"{{$randomLoremParagraph}}\",\n  \"type\": \"tente\",\n  \"pricePerNight\": 40.00,\n  \"capacity\": 0,\n  \"amenities\": [\"électricité\", \"eau\"]\n}"
+              "raw": "{\n  \"name\": \"Emplacement tente Lac C\",\n  \"location\": \"Secteur Lac - Rive nord\",\n  \"description\": \"{{$randomLoremParagraph}}\",\n  \"type\": \"tente\",\n  \"pricePerNight\": 40.00,\n  \"capacity\": 0,\n  \"amenities\": [\"électricité\", \"eau\"]\n}"
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
         },
         {
-          "name": "/api/campsites (amenities absent)",
+          "name": "/api/campsites (capacity négatif)",
           "event": [
             {
               "listen": "test",
               "script": {
                 "exec": [
-                  "pm.test(\"Status code is 400\", function () {",
-                  "    pm.response.to.have.status(400);",
+                  "pm.test(\"Status code is 422\", function () {",
+                  "    pm.response.to.have.status(422);",
                   "});",
                   "",
                   "const errorSchema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaErrorResponse\"));",
@@ -2816,12 +3113,112 @@
             ],
             "body": {
               "mode": "raw",
+              "raw": "{\n  \"name\": \"Emplacement tente Lac C\",\n  \"location\": \"Secteur Lac - Rive nord\",\n  \"description\": \"{{$randomLoremParagraph}}\",\n  \"type\": \"tente\",\n  \"pricePerNight\": 40.00,\n  \"capacity\": -1,\n  \"amenities\": [\"électricité\", \"eau\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/campsites",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/campsites (amenities absent)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 201\", function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "",
+                  "const schema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaSuccessResponse\"));",
+                  "",
+                  "//validation du schéma de réponse",
+                  "pm.test(\"jsonSchemaSuccessResponse response format is valid\", function () {",
+                  "    pm.response.to.have.jsonSchema(schema);",
+                  "});",
+                  "",
+                  "pm.test(\"Campsite created\", function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.data).to.have.property('_id');",
+                  "   ",
+                  "});",
+                  "",
+                  "// Récupération depuis les variables de collection",
+                  "const jsonSchemaCampsite = JSON.parse(",
+                  "    pm.collectionVariables.get(\"jsonSchemaCampsite\")",
+                  ");",
+                  "",
+                  " var jsonData = pm.response.json();",
+                  "",
+                  "//validation du schéma",
+                  "pm.test(\"Campsite matches schema\", function () {",
+                  "    pm.expect(jsonData.data).to.have.jsonSchema(jsonSchemaCampsite);",
+                  "",
+                  "});",
+                  "",
+                  "//L'object envoyé correspond à l'object retourné",
+                  "const requestBody = JSON.parse(pm.request.body.raw);",
+                  "const responseCampsite = pm.response.json().data;",
+                  "",
+                  "[\"name\", \"location\", \"description\",\"type\", \"pricePerNight\",\"capacity\", \"maxVehiculeLenght\"].forEach(field => {",
+                  "    pm.test(`${field} matches request`, function () {",
+                  "        pm.expect(responseCampsite[field])",
+                  "            .to.eql(requestBody[field]);",
+                  "    });",
+                  "});",
+                  "",
+                  "pm.test(\"Location header is not empty\", function () {",
+                  "    const location = pm.response.headers.get(\"Location\");",
+                  "    pm.expect(location).to.be.a(\"string\").and.not.empty;",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
               "raw": "{\n  \"name\": \"{{$randomLoremWord}}\",\n  \"location\": \"{{$randomLoremWords}}\",\n  \"description\": \"{{$randomLoremParagraph}}\",\n  \"type\": \"tente\",\n  \"pricePerNight\": 40.00,\n  \"capacity\": 6\n}"
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2873,14 +3270,19 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
         },
         {
-          "name": "/api/campsites (rv + maxlength vide)",
+          "name": "/api/campsites (rv + maxlength 0)",
           "event": [
             {
               "listen": "test",
@@ -2926,8 +3328,71 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/campsites (rv + maxlength négatif)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 422\", function () {",
+                  "    pm.response.to.have.status(422);",
+                  "});",
+                  "",
+                  "const errorSchema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaErrorResponse\"));",
+                  "",
+                  "pm.test(\"Error response format is valid\", function () {",
+                  "    pm.response.to.have.jsonSchema(errorSchema);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Site VR Premium\",\n  \"location\": \"Parc national de la Jacques-Cartier\",\n  \"description\": \"Grand emplacement pour véhicule récréatif avec services complets.\",\n  \"type\": \"rv\",\n  \"pricePerNight\": 65.00,\n  \"capacity\": 6,\n   \"maxVehicleLength\": -1,\n  \"amenities\": [\"électricité\", \"eau\", \"égout\", \"wifi\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/campsites",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -2961,6 +3426,10 @@
                   "//validation du schéma",
                   "pm.test(\"Campsite array matches schema\", function () {",
                   "    pm.expect(jsonData.data).to.have.jsonSchema(jsonSchema);",
+                  "});",
+                  "",
+                  "pm.test(\"Number of campsites found is correct\", function () {",
+                  "    pm.expect(jsonData.data.length).to.eql(11); ",
                   "});"
                 ],
                 "type": "text/javascript",
@@ -2977,8 +3446,13 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ]
             }
           },
           "response": []
@@ -3035,8 +3509,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -3080,8 +3560,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites/{{fake_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{fake_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{fake_id}}"
+              ]
             }
           },
           "response": []
@@ -3125,8 +3611,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites/{{invalid_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{invalid_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{invalid_id}}"
+              ]
             }
           },
           "response": []
@@ -3163,7 +3655,7 @@
                   "});",
                   "",
                   "pm.test(\"Number of campsites found is correct\", function () {",
-                  "    pm.expect(jsonData.data.length).to.eql(9); ",
+                  "    pm.expect(jsonData.data.length).to.eql(10); ",
                   "});"
                 ],
                 "type": "text/javascript",
@@ -3180,8 +3672,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites/available?startDate=2026-07-01&endDate=2026-07-05",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "available"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "available"
+              ],
               "query": [
                 {
                   "key": "startDate",
@@ -3228,7 +3726,7 @@
                   "});",
                   "",
                   "pm.test(\"Number of campsites found is correct\", function () {",
-                  "    pm.expect(jsonData.data.length).to.eql(2); ",
+                  "    pm.expect(jsonData.data.length).to.eql(3); ",
                   "});"
                 ],
                 "type": "text/javascript",
@@ -3245,8 +3743,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites/available?startDate=2026-07-01&endDate=2026-07-05&type=tente",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "available"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "available"
+              ],
               "query": [
                 {
                   "key": "startDate",
@@ -3297,7 +3801,7 @@
                   "});",
                   "",
                   "pm.test(\"Number of campsites found is correct\", function () {",
-                  "    pm.expect(jsonData.data.length).to.eql(3); ",
+                  "    pm.expect(jsonData.data.length).to.eql(4); ",
                   "});"
                 ],
                 "type": "text/javascript",
@@ -3314,8 +3818,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites/available?startDate=2026-07-01&endDate=2026-07-05&guests=5\n",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "available"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "available"
+              ],
               "query": [
                 {
                   "key": "startDate",
@@ -3383,8 +3893,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites/available?startDate=2026-07-01&endDate=2026-07-05&vehicleLength=20&type=rv",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "available"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "available"
+              ],
               "query": [
                 {
                   "key": "startDate",
@@ -3456,8 +3972,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites/available?startDate=2026-07-28&endDate=2026-07-30&type=rv",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "available"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "available"
+              ],
               "query": [
                 {
                   "key": "startDate",
@@ -3508,7 +4030,7 @@
                   "});",
                   "",
                   "pm.test(\"Number of campsites found is correct\", function () {",
-                  "    pm.expect(jsonData.data.length).to.eql(3); ",
+                  "    pm.expect(jsonData.data.length).to.eql(4); ",
                   "});",
                   ""
                 ],
@@ -3526,8 +4048,13 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites?type=tente",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ],
               "query": [
                 {
                   "key": "type",
@@ -3583,8 +4110,13 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites?type=invalid",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites"
+              ],
               "query": [
                 {
                   "key": "type",
@@ -3630,7 +4162,7 @@
                   "const requestBody = JSON.parse(pm.request.body.raw);",
                   "const responseCampsite = pm.response.json().data;",
                   "",
-                  "[\"name\", \"location\", \"description\",\"type\", \"pricePerNight\",\"capacity\", \"maxVehiculeLenght\", \"amenities\"].forEach(field => {",
+                  "[\"name\", \"location\", \"description\",\"type\", \"pricePerNight\",\"capacity\", \"maxVehiculeLenght\"].forEach(field => {",
                   "    pm.test(`${field} matches request`, function () {",
                   "        pm.expect(responseCampsite[field])",
                   "            .to.eql(requestBody[field]);",
@@ -3668,8 +4200,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -3721,8 +4259,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -3767,8 +4311,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -3820,8 +4370,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -3873,8 +4429,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{fake_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{fake_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{fake_id}}"
+              ]
             }
           },
           "response": []
@@ -3926,8 +4488,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -3979,8 +4547,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4032,8 +4606,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4085,8 +4665,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4138,8 +4724,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4191,8 +4783,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4244,8 +4842,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4297,8 +4901,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4350,8 +4960,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4403,8 +5019,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4456,8 +5078,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4469,15 +5097,41 @@
               "listen": "test",
               "script": {
                 "exec": [
-                  "pm.test(\"Status code is 400\", function () {",
-                  "    pm.response.to.have.status(400);",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
                   "});",
                   "",
-                  "const errorSchema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaErrorResponse\"));",
                   "",
-                  "pm.test(\"Error response format is valid\", function () {",
-                  "    pm.response.to.have.jsonSchema(errorSchema);",
-                  "});"
+                  "const jsonSchemaSuccessResponse = JSON.parse(pm.collectionVariables.get(\"jsonSchemaSuccessResponse\"));",
+                  "",
+                  "//validation du schéma de réponse",
+                  "pm.test(\"Succes response format is valid\", function () {",
+                  "    pm.response.to.have.jsonSchema(jsonSchemaSuccessResponse);",
+                  "});",
+                  "",
+                  "// Récupération depuis les variables de collection",
+                  "const jsonSchema = JSON.parse(",
+                  "    pm.collectionVariables.get(\"jsonSchemaCampsite\")",
+                  ");",
+                  "",
+                  " var jsonData = pm.response.json();",
+                  "",
+                  "//validation du schéma",
+                  "pm.test(\"Campsite matches schema\", function () {",
+                  "    pm.expect(jsonData.data).to.have.jsonSchema(jsonSchema);",
+                  "});",
+                  "",
+                  "//L'object envoyé correspond à l'object retourné",
+                  "const requestBody = JSON.parse(pm.request.body.raw);",
+                  "const responseCampsite = pm.response.json().data;",
+                  "",
+                  "[\"name\", \"location\", \"description\",\"type\", \"pricePerNight\",\"capacity\", \"maxVehiculeLenght\"].forEach(field => {",
+                  "    pm.test(`${field} matches request`, function () {",
+                  "        pm.expect(responseCampsite[field])",
+                  "            .to.eql(requestBody[field]);",
+                  "    });",
+                  "});",
+                  ""
                 ],
                 "type": "text/javascript",
                 "packages": {},
@@ -4509,8 +5163,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4562,8 +5222,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4615,8 +5281,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4657,8 +5329,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4694,8 +5372,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4738,8 +5422,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites/{{campsite_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{campsite_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{campsite_id}}"
+              ]
             }
           },
           "response": []
@@ -4780,8 +5470,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/campsites/{{fake_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "campsites", "{{fake_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "campsites",
+                "{{fake_id}}"
+              ]
             }
           },
           "response": []
@@ -4892,8 +5588,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations"
+              ]
             }
           },
           "response": []
@@ -4938,8 +5639,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations"
+              ]
             }
           },
           "response": []
@@ -4991,8 +5697,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations"
+              ]
             }
           },
           "response": []
@@ -5044,8 +5755,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations"
+              ]
             }
           },
           "response": []
@@ -5097,8 +5813,13 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations"
+              ]
             }
           },
           "response": []
@@ -5109,17 +5830,34 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
                   "    pm.response.to.have.status(200);",
                   "});",
                   "",
-                  "pm.test(\"Response is an array\", function () {",
-                  "    var jsonData = pm.response.json();",
-                  "    pm.expect(jsonData.data).to.be.an('array');",
+                  "",
+                  "const schema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaSuccessResponse\"));",
+                  "",
+                  "//validation du schéma de réponse",
+                  "pm.test(\"Succes response format is valid\", function () {",
+                  "    pm.response.to.have.jsonSchema(schema);",
+                  "});",
+                  "",
+                  "// Récupération depuis les variables de collection",
+                  "const jsonSchema = JSON.parse(",
+                  "    pm.collectionVariables.get(\"jsonSchemaArrayReservation\")",
+                  ");",
+                  "",
+                  " var jsonData = pm.response.json();",
+                  "",
+                  "//validation du schéma",
+                  "pm.test(\"Reservation array matches schema\", function () {",
+                  "    pm.expect(jsonData.data).to.have.jsonSchema(jsonSchema);",
                   "});"
-                ]
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
               }
             }
           ],
@@ -5138,8 +5876,13 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/reservations",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations"
+              ]
             }
           },
           "response": []
@@ -5150,12 +5893,20 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 401\", function () {",
                   "    pm.response.to.have.status(401);",
+                  "});",
+                  "",
+                  "const errorSchema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaErrorResponse\"));",
+                  "",
+                  "pm.test(\"Error response format is valid\", function () {",
+                  "    pm.response.to.have.jsonSchema(errorSchema);",
                   "});"
-                ]
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
               }
             }
           ],
@@ -5167,8 +5918,13 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/reservations",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations"
+              ]
             }
           },
           "response": []
@@ -5179,17 +5935,42 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 200\", function () {",
                   "    pm.response.to.have.status(200);",
                   "});",
                   "",
-                  "pm.test(\"Filtered by status\", function () {",
-                  "    var jsonData = pm.response.json();",
-                  "    pm.expect(jsonData.data).to.be.an('array');",
-                  "});"
-                ]
+                  "",
+                  "const schema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaSuccessResponse\"));",
+                  "",
+                  "//validation du schéma de réponse",
+                  "pm.test(\"Succes response format is valid\", function () {",
+                  "    pm.response.to.have.jsonSchema(schema);",
+                  "});",
+                  "",
+                  "// Récupération depuis les variables de collection",
+                  "const jsonSchema = JSON.parse(",
+                  "    pm.collectionVariables.get(\"jsonSchemaArrayReservation\")",
+                  ");",
+                  "",
+                  " var jsonData = pm.response.json();",
+                  "",
+                  "//validation du schéma",
+                  "pm.test(\"Reservation array matches schema\", function () {",
+                  "    pm.expect(jsonData.data).to.have.jsonSchema(jsonSchema);",
+                  "});",
+                  "",
+                  "//Vérificaiton du status",
+                  "pm.test(\"Reservation status is confirmed\", function() {",
+                  "    jsonData.data.forEach((reservation) =>{",
+                  "        pm.expect(reservation.status).to.equal(\"confirmed\");",
+                  "    })",
+                  "})",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
               }
             }
           ],
@@ -5208,12 +5989,226 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/reservations?status=confirmed",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations"
+              ],
               "query": [
                 {
                   "key": "status",
                   "value": "confirmed"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/reservations?status=pending",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "",
+                  "const schema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaSuccessResponse\"));",
+                  "",
+                  "//validation du schéma de réponse",
+                  "pm.test(\"Succes response format is valid\", function () {",
+                  "    pm.response.to.have.jsonSchema(schema);",
+                  "});",
+                  "",
+                  "// Récupération depuis les variables de collection",
+                  "const jsonSchema = JSON.parse(",
+                  "    pm.collectionVariables.get(\"jsonSchemaArrayReservation\")",
+                  ");",
+                  "",
+                  " var jsonData = pm.response.json();",
+                  "",
+                  "//validation du schéma",
+                  "pm.test(\"Reservation array matches schema\", function () {",
+                  "    pm.expect(jsonData.data).to.have.jsonSchema(jsonSchema);",
+                  "});",
+                  "",
+                  "//Vérificaiton du status",
+                  "pm.test(\"Reservation status is pending\", function() {",
+                  "    jsonData.data.forEach((reservation) =>{",
+                  "        pm.expect(reservation.status).to.equal(\"pending\");",
+                  "    })",
+                  "})",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{user_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/reservations?status=pending",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "pending"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/reservations?status=cancelled",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "",
+                  "const schema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaSuccessResponse\"));",
+                  "",
+                  "//validation du schéma de réponse",
+                  "pm.test(\"Succes response format is valid\", function () {",
+                  "    pm.response.to.have.jsonSchema(schema);",
+                  "});",
+                  "",
+                  "// Récupération depuis les variables de collection",
+                  "const jsonSchema = JSON.parse(",
+                  "    pm.collectionVariables.get(\"jsonSchemaArrayReservation\")",
+                  ");",
+                  "",
+                  " var jsonData = pm.response.json();",
+                  "",
+                  "//validation du schéma",
+                  "pm.test(\"Reservation array matches schema\", function () {",
+                  "    pm.expect(jsonData.data).to.have.jsonSchema(jsonSchema);",
+                  "});",
+                  "",
+                  "//Vérificaiton du status",
+                  "pm.test(\"Reservation status is cancelled\", function() {",
+                  "    jsonData.data.forEach((reservation) =>{",
+                  "        pm.expect(reservation.status).to.equal(\"cancelled\");",
+                  "    })",
+                  "})",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{user_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/reservations?status=cancelled",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "cancelled"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/api/reservations?status=invalid_status",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 422\", function () {",
+                  "    pm.response.to.have.status(422);",
+                  "});",
+                  "",
+                  "const errorSchema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaErrorResponse\"));",
+                  "",
+                  "pm.test(\"Error response format is valid\", function () {",
+                  "    pm.response.to.have.jsonSchema(errorSchema);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{user_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/reservations?status=invalid_status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "invalid_status"
                 }
               ]
             }
@@ -5275,8 +6270,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/reservations/{{reservation_existing_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{reservation_existing_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{reservation_existing_id}}"
+              ]
             }
           },
           "response": []
@@ -5336,8 +6337,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/reservations/{{reservation_existing_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{reservation_existing_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{reservation_existing_id}}"
+              ]
             }
           },
           "response": []
@@ -5348,12 +6355,22 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 401\", function () {",
                   "    pm.response.to.have.status(401);",
-                  "});"
-                ]
+                  "});",
+                  "",
+                  "const errorSchema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaErrorResponse\"));",
+                  "",
+                  "pm.test(\"Error response format is valid\", function () {",
+                  "    pm.response.to.have.jsonSchema(errorSchema);",
+                  "});",
+                  "",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
               }
             }
           ],
@@ -5365,8 +6382,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/reservations/{{reservation_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{reservation_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{reservation_id}}"
+              ]
             }
           },
           "response": []
@@ -5377,12 +6400,22 @@
             {
               "listen": "test",
               "script": {
-                "type": "text/javascript",
                 "exec": [
                   "pm.test(\"Status code is 404\", function () {",
                   "    pm.response.to.have.status(404);",
-                  "});"
-                ]
+                  "});",
+                  "",
+                  "const errorSchema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaErrorResponse\"));",
+                  "",
+                  "pm.test(\"Error response format is valid\", function () {",
+                  "    pm.response.to.have.jsonSchema(errorSchema);",
+                  "});",
+                  "",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
               }
             }
           ],
@@ -5401,8 +6434,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/reservations/507f1f77bcf86cd799439011",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "507f1f77bcf86cd799439011"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "507f1f77bcf86cd799439011"
+              ]
             }
           },
           "response": []
@@ -5416,7 +6455,15 @@
                 "exec": [
                   "pm.test(\"Status code is 400\", function () {",
                   "    pm.response.to.have.status(400);",
-                  "});"
+                  "});",
+                  "",
+                  "const errorSchema = JSON.parse(pm.collectionVariables.get(\"jsonSchemaErrorResponse\"));",
+                  "",
+                  "pm.test(\"Error response format is valid\", function () {",
+                  "    pm.response.to.have.jsonSchema(errorSchema);",
+                  "});",
+                  "",
+                  ""
                 ],
                 "type": "text/javascript",
                 "packages": {},
@@ -5439,8 +6486,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/reservations/{{invalid_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{invalid_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{invalid_id}}"
+              ]
             }
           },
           "response": []
@@ -5543,8 +6596,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations/{{reservation_pending_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{reservation_pending_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{reservation_pending_id}}"
+              ]
             }
           },
           "response": []
@@ -5564,7 +6623,9 @@
                   "",
                   "pm.test(\"Error response format is valid\", function () {",
                   "    pm.response.to.have.jsonSchema(errorSchema);",
-                  "});"
+                  "});",
+                  "",
+                  ""
                 ],
                 "type": "text/javascript",
                 "packages": {},
@@ -5589,8 +6650,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations/{{reservation_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{reservation_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{reservation_id}}"
+              ]
             }
           },
           "response": []
@@ -5642,8 +6709,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations/507f1f77bcf86cd799439011",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "507f1f77bcf86cd799439011"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "507f1f77bcf86cd799439011"
+              ]
             }
           },
           "response": []
@@ -5695,8 +6768,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations/{{reservation_pending_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{reservation_pending_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{reservation_pending_id}}"
+              ]
             }
           },
           "response": []
@@ -5748,8 +6827,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations/{{fake_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{fake_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{fake_id}}"
+              ]
             }
           },
           "response": []
@@ -5801,8 +6886,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations/{{reservation_id_not_owner}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{reservation_id_not_owner}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{reservation_id_not_owner}}"
+              ]
             }
           },
           "response": []
@@ -5829,7 +6920,7 @@
                   "",
                   "",
                   "// Récupération depuis les variables de collection",
-                  "const jsonSchemaCampsite = JSON.parse(",
+                  "const jsonSchemaReservation = JSON.parse(",
                   "    pm.collectionVariables.get(\"jsonSchemaReservation\")",
                   ");",
                   "",
@@ -5837,7 +6928,7 @@
                   "",
                   "//validation du schéma",
                   "pm.test(\"Reservation matches schema\", function () {",
-                  "    pm.expect(jsonData.data).to.have.jsonSchema(jsonSchemaCampsite);",
+                  "    pm.expect(jsonData.data).to.have.jsonSchema(jsonSchemaReservation);",
                   " ",
                   "});",
                   "",
@@ -5875,8 +6966,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations/{{reservation_pending_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{reservation_pending_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{reservation_pending_id}}"
+              ]
             }
           },
           "response": []
@@ -5903,7 +7000,7 @@
                   "",
                   "",
                   "// Récupération depuis les variables de collection",
-                  "const jsonSchemaCampsite = JSON.parse(",
+                  "const jsonSchemaReservation = JSON.parse(",
                   "    pm.collectionVariables.get(\"jsonSchemaReservation\")",
                   ");",
                   "",
@@ -5911,7 +7008,7 @@
                   "",
                   "//validation du schéma",
                   "pm.test(\"Reservation matches schema\", function () {",
-                  "    pm.expect(jsonData.data).to.have.jsonSchema(jsonSchemaCampsite);",
+                  "    pm.expect(jsonData.data).to.have.jsonSchema(jsonSchemaReservation);",
                   " ",
                   "});",
                   "",
@@ -5949,8 +7046,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations/{{reservation_pending_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{reservation_pending_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{reservation_pending_id}}"
+              ]
             }
           },
           "response": []
@@ -6002,8 +7105,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations/{{reservation_confirmed_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{reservation_confirmed_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{reservation_confirmed_id}}"
+              ]
             }
           },
           "response": []
@@ -6076,8 +7185,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations/{{reservation_confirmed_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{reservation_confirmed_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{reservation_confirmed_id}}"
+              ]
             }
           },
           "response": []
@@ -6129,8 +7244,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations/{{reservation_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{reservation_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{reservation_id}}"
+              ]
             }
           },
           "response": []
@@ -6182,8 +7303,14 @@
             },
             "url": {
               "raw": "{{base_url}}/api/reservations/{{reservation_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "reservations", "{{reservation_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reservations",
+                "{{reservation_id}}"
+              ]
             }
           },
           "response": []
@@ -6198,7 +7325,9 @@
         "type": "text/javascript",
         "packages": {},
         "requests": {},
-        "exec": [""]
+        "exec": [
+          ""
+        ]
       }
     },
     {
@@ -6207,7 +7336,9 @@
         "type": "text/javascript",
         "packages": {},
         "requests": {},
-        "exec": [""]
+        "exec": [
+          ""
+        ]
       }
     }
   ],
