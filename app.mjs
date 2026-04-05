@@ -30,6 +30,48 @@ app.use("/api/auth", userRoutes);
 app.use("/api/campsites", campsiteRoutes);
 app.use("/api/reservations", reservationRoutes);
 
+// 404 - route introuvable
+app.use((req, res) => {
+  res.status(404).json({
+    status: 404,
+    error: "NotFound",
+    path: req.originalUrl,
+    timestamp: new Date().toISOString(),
+    message: "Route introuvable",
+  });
+});
+
+// Middleware d'erreur centralisé (4 paramètres)
+app.use((err, req, res, next) => {
+  if (err.name === "CastError") {
+    return res.status(400).json({
+      status: 400,
+      error: "BadRequest",
+      path: req.originalUrl,
+      timestamp: new Date().toISOString(),
+      message: "ID invalide",
+    });
+  }
+
+  if (err.name === "ValidationError") {
+    return res.status(422).json({
+      status: 422,
+      error: "ValidationError",
+      path: req.originalUrl,
+      timestamp: new Date().toISOString(),
+      message: err.message,
+    });
+  }
+
+  return res.status(500).json({
+    status: 500,
+    error: "InternalServerError",
+    path: req.originalUrl,
+    timestamp: new Date().toISOString(),
+    message: "Erreur serveur",
+  });
+});
+
 // Connexion MongoDB
 mongoose
   .connect(process.env.MONGODB_URI)

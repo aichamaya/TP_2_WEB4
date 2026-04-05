@@ -14,6 +14,12 @@ const campsiteSchema = new mongoose.Schema(
       trim: true,
     },
 
+    description: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+
     type: {
       type: String,
       required: [true, "Le type est obligatoire"],

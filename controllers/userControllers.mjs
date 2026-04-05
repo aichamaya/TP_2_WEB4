@@ -1,22 +1,12 @@
-
 import User from "../models/user.mjs";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-
-
-export async function register(req, res) {
+export async function register(req, res, next) {
   const { firstName, lastName, email, phone, password, role } = req.body;
 
   try {
-    const newUser = await User.create({
-      firstName,
-      lastName,
-      email,
-      phone,
-      password,
-      role,
-    });
+    const newUser = await User.create({ firstName, lastName, email, phone, password, role });
 
     res.location(`/api/auth/${newUser._id}`);
 
@@ -39,39 +29,12 @@ export async function register(req, res) {
       },
     });
   } catch (err) {
-    res.status(500).json({
-      status: 500,
-      path: req.originalUrl,
-      timestamp: new Date().toISOString(),
-      message: "Erreur lors de la création de l'utilisateur",
-      error: err.message,
-    });
+    next(err);
   }
 }
-export async function login(req, res) {
+
+export async function login(req, res, next) {
   const { email, password } = req.body;
-
-  // Champs absents
-  if (email === undefined || password === undefined) {
-    return res.status(400).json({
-      status: 400,
-      error: "BadRequest",
-      path: req.originalUrl,
-      timestamp: new Date().toISOString(),
-      message: "Email et mot de passe sont requis",
-    });
-  }
-
-  // Champs vides
-  if (email.trim() === "" || password.trim() === "") {
-    return res.status(422).json({
-      status: 422,
-      error: "ValidationError",
-      path: req.originalUrl,
-      timestamp: new Date().toISOString(),
-      message: "Email et mot de passe ne doivent pas être vides",
-    });
-  }
 
   try {
     const user = await User.findOne({ email }).select("+password");
@@ -99,10 +62,7 @@ export async function login(req, res) {
     }
 
     const token = jwt.sign(
-      {
-        userId: user._id,
-        role: user.role,
-      },
+      { userId: user._id, role: user.role },
       process.env.JWT_SECRET,
       { expiresIn: "1h" }
     );
@@ -127,20 +87,13 @@ export async function login(req, res) {
       },
     });
   } catch (err) {
-    res.status(500).json({
-      status: 500,
-      error: "InternalServerError",
-      path: req.originalUrl,
-      timestamp: new Date().toISOString(),
-      message: "Erreur lors de la connexion",
-    });
+    next(err);
   }
 }
 
-
-export async function consulterProfil(req, res) {
+export async function consulterProfil(req, res, next) {
   try {
-    const user = await User.findById(req.user.userId).select("-password");
+    const user = await User.findById(req.user.userId);
 
     if (!user) {
       return res.status(404).json({
@@ -160,62 +113,19 @@ export async function consulterProfil(req, res) {
       data: user,
     });
   } catch (err) {
-    res.status(500).json({
-      status: 500,
-      error: "InternalServerError",
-      path: req.originalUrl,
-      timestamp: new Date().toISOString(),
-      message: "Erreur lors de la récupération du profil",
-    });
+    next(err);
   }
 }
 
-export async function modifierProfil(req, res) {
+export async function modifierProfil(req, res, next) {
   const { firstName, lastName, phone, role } = req.body;
-
-  // Champs absents
-  if (
-    firstName === undefined ||
-    lastName === undefined ||
-    phone === undefined ||
-    role === undefined
-  ) {
-    return res.status(400).json({
-      status: 400,
-      error: "BadRequest",
-      path: req.originalUrl,
-      timestamp: new Date().toISOString(),
-      message: "Tous les champs sont requis",
-    });
-  }
-
-  // Champs vides
-  if (
-    firstName.trim() === "" ||
-    lastName.trim() === "" ||
-    phone.trim() === "" ||
-    role.trim() === ""
-  ) {
-    return res.status(422).json({
-      status: 422,
-      error: "ValidationError",
-      path: req.originalUrl,
-      timestamp: new Date().toISOString(),
-      message: "Les champs ne doivent pas être vides",
-    });
-  }
 
   try {
     const updatedUser = await User.findByIdAndUpdate(
       req.user.userId,
-      {
-        firstName,
-        lastName,
-        phone,
-        role,
-      },
+      { firstName, lastName, phone, role },
       { new: true, runValidators: true }
-    ).select("-password");
+    );
 
     if (!updatedUser) {
       return res.status(404).json({
@@ -227,7 +137,7 @@ export async function modifierProfil(req, res) {
       });
     }
 
-    res.status(200).json({
+    return res.status(200).json({
       status: 200,
       path: req.originalUrl,
       timestamp: new Date().toISOString(),
@@ -235,28 +145,12 @@ export async function modifierProfil(req, res) {
       data: updatedUser,
     });
   } catch (err) {
-    res.status(500).json({
-      status: 500,
-      error: "InternalServerError",
-      path: req.originalUrl,
-      timestamp: new Date().toISOString(),
-      message: "Erreur lors de la modification du profil",
-    });
+    next(err);
   }
 }
-export async function modifierMotDePasse(req, res) {
-  const { currentPassword, newPassword } = req.body;
 
-  // Champs absents
-  if (currentPassword === undefined || newPassword === undefined) {
-    return res.status(400).json({
-      status: 400,
-      error: "BadRequest",
-      path: req.originalUrl,
-      timestamp: new Date().toISOString(),
-      message: "Tous les champs sont requis",
-    });
-  }
+export async function modifierMotDePasse(req, res, next) {
+  const { currentPassword, newPassword } = req.body;
 
   try {
     const user = await User.findById(req.user.userId).select("+password");
@@ -268,31 +162,6 @@ export async function modifierMotDePasse(req, res) {
         path: req.originalUrl,
         timestamp: new Date().toISOString(),
         message: "Utilisateur introuvable",
-      });
-    }
-
-    const regexMotDePasse =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
-
-    // Champs vides
-    if (currentPassword.trim() === "" || newPassword.trim() === "") {
-      return res.status(422).json({
-        status: 422,
-        error: "ValidationError",
-        path: req.originalUrl,
-        timestamp: new Date().toISOString(),
-        message: "Les champs ne doivent pas être vides",
-      });
-    }
-
-    // Nouveau mot de passe invalide
-    if (!regexMotDePasse.test(newPassword)) {
-      return res.status(422).json({
-        status: 422,
-        error: "ValidationError",
-        path: req.originalUrl,
-        timestamp: new Date().toISOString(),
-        message: "Le nouveau mot de passe est invalide",
       });
     }
 
@@ -319,12 +188,6 @@ export async function modifierMotDePasse(req, res) {
       data: null,
     });
   } catch (err) {
-    res.status(500).json({
-      status: 500,
-      error: "InternalServerError",
-      path: req.originalUrl,
-      timestamp: new Date().toISOString(),
-      message: "Erreur lors de la modification du mot de passe",
-    });
+    next(err);
   }
 }
