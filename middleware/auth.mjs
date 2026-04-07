@@ -1,5 +1,15 @@
 import jwt from "jsonwebtoken";
 
+/**
+ * Middleware d'authentification JWT.
+ * Vérifie la présence et la validité du token Bearer dans le header Authorization.
+ * Si le token est valide, les informations décodées (userId, role) sont attachées à `req.user`.
+ *
+ * @param {import('express').Request} req - La requête HTTP avec le header `Authorization: Bearer <token>`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {void} Passe au middleware suivant si authentifié, ou retourne une réponse 401 si non authentifié
+ */
 export const auth = (req, res, next) => {
   const authHeader = req.headers.authorization;
 
@@ -40,6 +50,16 @@ export const auth = (req, res, next) => {
   }
 };
 
+/**
+ * Middleware de restriction aux administrateurs.
+ * Doit être utilisé après le middleware `auth`.
+ * Refuse l'accès si l'utilisateur authentifié n'a pas le rôle "admin".
+ *
+ * @param {import('express').Request} req - La requête HTTP avec `req.user.role` défini par le middleware `auth`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {void} Passe au middleware suivant si administrateur, ou retourne une réponse 403 si accès refusé
+ */
 export const adminOnly = (req, res, next) => {
   if (req.user.role !== "admin") {
     return res.status(403).json({

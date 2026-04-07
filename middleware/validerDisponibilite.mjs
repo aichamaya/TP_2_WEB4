@@ -1,5 +1,16 @@
 const TYPES_VALIDES = ["tente", "rv", "chalet", "glamping", "arrière-pays", "autre"];
 
+/**
+ * Middleware de validation des paramètres de recherche de disponibilité.
+ * Vérifie que les dates `startDate` et `endDate` sont présentes et non vides.
+ * Valide également le filtre `type` s'il est fourni.
+ *
+ * @param {import('express').Request} req - La requête HTTP avec les paramètres de requête :
+ *   `startDate` (requis), `endDate` (requis), `type` (optionnel)
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {void} Passe au middleware suivant si valide, ou retourne une réponse 400/422 si invalide
+ */
 export function validerDisponibilite(req, res, next) {
   const { startDate, endDate, type } = req.query;
 

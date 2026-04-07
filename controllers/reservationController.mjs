@@ -3,6 +3,19 @@ import Campsite from "../models/campsite.mjs";
 
 const STATUTS_VALIDES = ["pending", "confirmed", "cancelled"];
 
+/**
+ * Crée une nouvelle réservation pour un campsite.
+ * Vérifie l'existence du campsite, la capacité d'accueil et l'absence de conflits de dates.
+ * Calcule automatiquement le prix total en fonction du nombre de nuits.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP contenant dans `req.body` :
+ *   `campsite` (ID), `startDate`, `endDate`, `guests`. L'utilisateur est extrait de `req.user`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 201 avec la réservation créée, 404 si campsite introuvable,
+ *   400 si la capacité est dépassée, ou 409 si un conflit de dates existe
+ */
 export async function createReservation(req, res, next) {
   const { campsite, startDate, endDate, guests } = req.body;
 
@@ -75,6 +88,17 @@ export async function createReservation(req, res, next) {
   }
 }
 
+/**
+ * Récupère la liste de toutes les réservations.
+ * Supporte un filtre optionnel par statut via le paramètre de requête `status`.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP avec `req.query.status` optionnel
+ *   parmi "pending", "confirmed", "cancelled"
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 200 avec la liste des réservations, ou 422 si le statut est invalide
+ */
 export async function getAllReservations(req, res, next) {
   const { status } = req.query;
 
@@ -106,6 +130,15 @@ export async function getAllReservations(req, res, next) {
   }
 }
 
+/**
+ * Récupère une réservation par son identifiant.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP avec `req.params.id` comme identifiant de la réservation
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 200 avec la réservation trouvée, ou 404 si introuvable
+ */
 export async function getReservationById(req, res, next) {
   try {
     const reservation = await Reservation.findById(req.params.id);
@@ -132,6 +165,20 @@ export async function getReservationById(req, res, next) {
   }
 }
 
+/**
+ * Met à jour une réservation existante.
+ * Seul l'utilisateur propriétaire ou un administrateur peut modifier la réservation.
+ * La modification n'est permise que si la réservation est en statut "pending".
+ * Recalcule le prix total selon les nouvelles dates et vérifie les conflits.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP avec `req.params.id` et dans `req.body` :
+ *   `startDate`, `endDate`, `guests`, `campsite` (optionnel). L'utilisateur est extrait de `req.user`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 200 avec la réservation modifiée, 403 si non autorisé,
+ *   404 si introuvable, 409 si conflit de dates
+ */
 export async function updateReservation(req, res, next) {
   try {
     const reservation = await Reservation.findById(req.params.id);
@@ -235,6 +282,19 @@ export async function updateReservation(req, res, next) {
   }
 }
 
+/**
+ * Met à jour le statut d'une réservation.
+ * Seul l'utilisateur propriétaire ou un administrateur peut changer le statut.
+ * Certaines transitions de statut sont interdites : confirmed→pending, cancelled→pending, cancelled→confirmed.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP avec `req.params.id` et `req.body.status`
+ *   parmi "pending", "confirmed", "cancelled". L'utilisateur est extrait de `req.user`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 200 avec la réservation mise à jour, 400 si la transition est invalide,
+ *   403 si non autorisé, 404 si introuvable, ou 422 si le statut est invalide
+ */
 export async function updateStatutReservation(req, res, next) {
   try {
     const reservation = await Reservation.findById(req.params.id);

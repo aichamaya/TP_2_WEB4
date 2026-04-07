@@ -1,3 +1,14 @@
+/**
+ * Middleware de validation des données de création d'une réservation.
+ * Vérifie la présence et la validité des champs : campsite, startDate, endDate et guests.
+ * S'assure que le nombre de personnes est au moins 1 et que la date de début est avant la date de fin.
+ *
+ * @param {import('express').Request} req - La requête HTTP avec dans `req.body` :
+ *   `campsite`, `startDate`, `endDate`, `guests`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {void} Passe au middleware suivant si valide, ou retourne une réponse 400/422 si invalide
+ */
 export function validerReservation(req, res, next) {
   const { campsite, startDate, endDate, guests } = req.body;
 
@@ -49,6 +60,17 @@ export function validerReservation(req, res, next) {
   next();
 }
 
+/**
+ * Middleware de validation des données de modification d'une réservation.
+ * Vérifie la présence et la validité des champs : startDate, endDate et guests.
+ * S'assure que le nombre de personnes est au moins 1 et que la date de début est avant la date de fin.
+ *
+ * @param {import('express').Request} req - La requête HTTP avec dans `req.body` :
+ *   `startDate`, `endDate`, `guests`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {void} Passe au middleware suivant si valide, ou retourne une réponse 400/422 si invalide
+ */
 export function validerModificationReservation(req, res, next) {
   const { startDate, endDate, guests } = req.body;
 

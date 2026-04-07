@@ -1,6 +1,16 @@
 import Campsite from "../models/campsite.mjs";
 import Reservation from "../models/reservation.mjs";
 
+/**
+ * Crée un nouveau campsite.
+ * Vérifie si un campsite avec le même nom existe déjà avant de le créer.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP contenant les données du campsite dans `req.body`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 201 avec le campsite créé, ou 409 si un conflit existe
+ */
 export async function createCampsite(req, res, next) {
   const { name, location, description, type, pricePerNight, maxVehicleLength, capacity, amenities } = req.body;
 
@@ -54,6 +64,16 @@ export async function createCampsite(req, res, next) {
   }
 }
 
+/**
+ * Récupère la liste de tous les campsites.
+ * Supporte un filtre optionnel par type via le paramètre de requête `type`.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP avec `req.query.type` optionnel
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 200 avec la liste des campsites
+ */
 export async function getAllCampsites(req, res, next) {
   const { type } = req.query;
 
@@ -75,6 +95,18 @@ export async function getAllCampsites(req, res, next) {
   }
 }
 
+/**
+ * Récupère les campsites disponibles pour une période donnée.
+ * Exclut les campsites ayant des réservations actives (pending ou confirmed) qui chevauchent la période.
+ * Supporte des filtres optionnels par type, nombre de personnes et longueur de véhicule.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP avec les paramètres de requête :
+ *   `startDate`, `endDate`, `type` (optionnel), `guests` (optionnel), `vehicleLength` (optionnel)
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 200 avec la liste des campsites disponibles
+ */
 export async function getAvailableCampsites(req, res, next) {
   const { startDate, endDate, type, guests, vehicleLength } = req.query;
 
@@ -107,6 +139,15 @@ export async function getAvailableCampsites(req, res, next) {
   }
 }
 
+/**
+ * Récupère un campsite par son identifiant.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP avec `req.params.id` comme identifiant du campsite
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 200 avec le campsite trouvé, ou 404 si introuvable
+ */
 export async function getCampsiteById(req, res, next) {
   try {
     const campsite = await Campsite.findById(req.params.id);
@@ -133,6 +174,16 @@ export async function getCampsiteById(req, res, next) {
   }
 }
 
+/**
+ * Met à jour les informations d'un campsite existant.
+ * Vérifie qu'un autre campsite avec le même nom n'existe pas déjà.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP avec `req.params.id` et les nouvelles données dans `req.body`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 200 avec le campsite modifié, 404 si introuvable, ou 409 si conflit de nom
+ */
 export async function updateCampsite(req, res, next) {
   const { name, location, description, type, pricePerNight, maxVehicleLength, capacity, amenities } = req.body;
 
@@ -189,6 +240,16 @@ export async function updateCampsite(req, res, next) {
   }
 }
 
+/**
+ * Supprime un campsite par son identifiant.
+ * Refuse la suppression si le campsite possède des réservations actives (pending ou confirmed).
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP avec `req.params.id` comme identifiant du campsite
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 204 si supprimé avec succès, ou 409 si des réservations actives existent
+ */
 export async function deleteCampsite(req, res, next) {
   try {
     const reservationActive = await Reservation.findOne({

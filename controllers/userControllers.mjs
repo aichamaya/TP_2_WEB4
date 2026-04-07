@@ -2,6 +2,17 @@ import User from "../models/user.mjs";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
+/**
+ * Inscrit un nouvel utilisateur dans le système.
+ * Crée le compte avec les informations fournies et retourne les données du profil créé.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP contenant dans `req.body` :
+ *   `firstName`, `lastName`, `email`, `phone`, `password`, `role`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 201 avec les informations de l'utilisateur créé
+ */
 export async function register(req, res, next) {
   const { firstName, lastName, email, phone, password, role } = req.body;
 
@@ -33,6 +44,17 @@ export async function register(req, res, next) {
   }
 }
 
+/**
+ * Authentifie un utilisateur et retourne un token JWT.
+ * Vérifie les identifiants (email et mot de passe) et génère un token valide 1 heure.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP contenant `req.body.email` et `req.body.password`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 200 avec les informations de l'utilisateur et le token JWT,
+ *   ou 401 si les identifiants sont invalides
+ */
 export async function login(req, res, next) {
   const { email, password } = req.body;
 
@@ -91,6 +113,15 @@ export async function login(req, res, next) {
   }
 }
 
+/**
+ * Récupère le profil de l'utilisateur actuellement authentifié.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP avec l'utilisateur extrait du token JWT dans `req.user`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 200 avec les données du profil, ou 404 si l'utilisateur est introuvable
+ */
 export async function consulterProfil(req, res, next) {
   try {
     const user = await User.findById(req.user.userId);
@@ -117,6 +148,16 @@ export async function consulterProfil(req, res, next) {
   }
 }
 
+/**
+ * Modifie les informations du profil de l'utilisateur authentifié.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP avec dans `req.body` :
+ *   `firstName`, `lastName`, `phone`, `role`. L'utilisateur est extrait de `req.user`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 200 avec le profil mis à jour, ou 404 si l'utilisateur est introuvable
+ */
 export async function modifierProfil(req, res, next) {
   const { firstName, lastName, phone, role } = req.body;
 
@@ -149,6 +190,18 @@ export async function modifierProfil(req, res, next) {
   }
 }
 
+/**
+ * Modifie le mot de passe de l'utilisateur authentifié.
+ * Vérifie que l'ancien mot de passe est correct avant de le remplacer.
+ *
+ * @async
+ * @param {import('express').Request} req - La requête HTTP avec dans `req.body` :
+ *   `currentPassword` et `newPassword`. L'utilisateur est extrait de `req.user`
+ * @param {import('express').Response} res - La réponse HTTP
+ * @param {import('express').NextFunction} next - La fonction middleware suivante
+ * @returns {Promise<void>} Réponse 200 si le mot de passe est modifié, 401 si le mot de passe actuel est incorrect,
+ *   ou 404 si l'utilisateur est introuvable
+ */
 export async function modifierMotDePasse(req, res, next) {
   const { currentPassword, newPassword } = req.body;
 
