@@ -113,8 +113,8 @@ export async function getAvailableCampsites(req, res, next) {
   try {
     const reservations = await Reservation.find({
       status: { $in: ["pending", "confirmed"] },
-      startDate: { $lte: new Date(endDate) },
-      endDate: { $gte: new Date(startDate) },
+      startDate: { $lt: new Date(endDate) },
+      endDate: { $gt: new Date(startDate) },
     });
 
     const campsiteIdsIndisponibles = reservations.map((r) => r.campsite);
