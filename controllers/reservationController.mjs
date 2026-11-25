@@ -116,7 +116,8 @@ export async function getAllReservations(req, res, next) {
     const filtre = {};
     if (status) filtre.status = status;
 
-    const reservations = await Reservation.find(filtre);
+    //const reservations = await Reservation.find(filtre);
+    const reservations = await Reservation.find(filtre).populate("campsite", "name");
 
     res.status(200).json({
       status: 200,

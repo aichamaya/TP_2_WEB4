@@ -17,15 +17,14 @@ const regexCourriel = new RegExp(
  * @returns {Promise<void>} Passe au middleware suivant si valide, ou retourne une réponse 400/409/422 si invalide
  */
 export const validateUtilisateur = async (req, res, next) => {
-  const { firstName, lastName, email, phone, password, role } = req.body;
+  const { firstName, lastName, email, phone, password } = req.body;
 
   if (
     firstName === undefined ||
     lastName === undefined ||
     email === undefined ||
     phone === undefined ||
-    password === undefined ||
-    role === undefined
+    password === undefined  
   ) {
     return res.status(400).json({
       status: 400,
@@ -41,8 +40,7 @@ export const validateUtilisateur = async (req, res, next) => {
     lastName.trim() === "" ||
     email.trim() === "" ||
     phone.trim() === "" ||
-    password.trim() === "" ||
-    role.trim() === ""
+    password.trim() === ""   
   ) {
     return res.status(422).json({
       status: 422,

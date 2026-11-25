@@ -14,10 +14,10 @@ import jwt from "jsonwebtoken";
  * @returns {Promise<void>} Réponse 201 avec les informations de l'utilisateur créé
  */
 export async function register(req, res, next) {
-  const { firstName, lastName, email, phone, password, role } = req.body;
+  const { firstName, lastName, email, phone, password} = req.body;
 
   try {
-    const newUser = await User.create({ firstName, lastName, email, phone, password, role });
+    const newUser = await User.create({ firstName, lastName, email, phone, password, role: "user" });
 
     res.location(`/api/auth/${newUser._id}`);
 
