@@ -7,7 +7,7 @@ const regexCourriel = new RegExp(
 /**
  * Middleware de validation des données d'inscription d'un utilisateur.
  * Vérifie la présence et la validité de tous les champs requis : firstName, lastName,
- * email, phone, password et role. Valide le format de l'email et la complexité du mot de passe.
+ * email, phone, password. Valide le format de l'email et la complexité du mot de passe.
  * Vérifie également que l'email n'est pas déjà utilisé dans la base de données.
  *
  * @async
@@ -17,15 +17,14 @@ const regexCourriel = new RegExp(
  * @returns {Promise<void>} Passe au middleware suivant si valide, ou retourne une réponse 400/409/422 si invalide
  */
 export const validateUtilisateur = async (req, res, next) => {
-  const { firstName, lastName, email, phone, password, role } = req.body;
+  const { firstName, lastName, email, phone, password } = req.body;
 
   if (
     firstName === undefined ||
     lastName === undefined ||
     email === undefined ||
     phone === undefined ||
-    password === undefined ||
-    role === undefined
+    password === undefined  
   ) {
     return res.status(400).json({
       status: 400,
@@ -41,8 +40,7 @@ export const validateUtilisateur = async (req, res, next) => {
     lastName.trim() === "" ||
     email.trim() === "" ||
     phone.trim() === "" ||
-    password.trim() === "" ||
-    role.trim() === ""
+    password.trim() === ""   
   ) {
     return res.status(422).json({
       status: 422,
@@ -136,22 +134,21 @@ export function validerLogin(req, res, next) {
 
 /**
  * Middleware de validation des données de modification du profil utilisateur.
- * Vérifie que les champs firstName, lastName, phone et role sont présents et non vides.
+ * Vérifie que les champs firstName, lastName, phone sont présents et non vides.
  *
  * @param {import('express').Request} req - La requête HTTP avec dans `req.body` :
- *   `firstName`, `lastName`, `phone`, `role`
+ *   `firstName`, `lastName`, `phone`
  * @param {import('express').Response} res - La réponse HTTP
  * @param {import('express').NextFunction} next - La fonction middleware suivante
  * @returns {void} Passe au middleware suivant si valide, ou retourne une réponse 400/422 si invalide
  */
 export function validerProfil(req, res, next) {
-  const { firstName, lastName, phone, role } = req.body;
+  const { firstName, lastName, phone } = req.body;
 
   if (
     firstName === undefined ||
     lastName === undefined ||
-    phone === undefined ||
-    role === undefined
+    phone === undefined 
   ) {
     return res.status(400).json({
       status: 400,
@@ -165,8 +162,7 @@ export function validerProfil(req, res, next) {
   if (
     firstName.trim() === "" ||
     lastName.trim() === "" ||
-    phone.trim() === "" ||
-    role.trim() === ""
+    phone.trim() === "" 
   ) {
     return res.status(422).json({
       status: 422,

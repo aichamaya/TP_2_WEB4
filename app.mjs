@@ -25,7 +25,10 @@ app.use((req, res, next) => {
 });
 
 // Routes
-app.use("/api/db", dbRoutes);
+//app.use("/api/db", dbRoutes);
+if (process.env.NODE_ENV !== "production" && process.env.ENABLE_DEMO_SEED === "true") {
+  app.use("/api/db", dbRoutes);
+}
 app.use("/api/auth", userRoutes);
 app.use("/api/campsites", campsiteRoutes);
 app.use("/api/reservations", reservationRoutes);

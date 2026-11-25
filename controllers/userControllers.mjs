@@ -14,10 +14,10 @@ import jwt from "jsonwebtoken";
  * @returns {Promise<void>} Réponse 201 avec les informations de l'utilisateur créé
  */
 export async function register(req, res, next) {
-  const { firstName, lastName, email, phone, password, role } = req.body;
+  const { firstName, lastName, email, phone, password} = req.body;
 
   try {
-    const newUser = await User.create({ firstName, lastName, email, phone, password, role });
+    const newUser = await User.create({ firstName, lastName, email, phone, password, role: "user" });
 
     res.location(`/api/auth/${newUser._id}`);
 
@@ -159,12 +159,12 @@ export async function consulterProfil(req, res, next) {
  * @returns {Promise<void>} Réponse 200 avec le profil mis à jour, ou 404 si l'utilisateur est introuvable
  */
 export async function modifierProfil(req, res, next) {
-  const { firstName, lastName, phone, role } = req.body;
+  const { firstName, lastName, phone} = req.body;
 
   try {
     const updatedUser = await User.findByIdAndUpdate(
       req.user.userId,
-      { firstName, lastName, phone, role },
+      { firstName, lastName, phone},
       { new: true, runValidators: true }
     );
 
