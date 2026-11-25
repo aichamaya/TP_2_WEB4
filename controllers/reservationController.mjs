@@ -60,7 +60,7 @@ export async function createReservation(req, res, next) {
     }
 
     const nbNuits = Math.ceil(
-      (new Date(endDate) - new Date(startDate)) / (1000 * 60 * 60 * 24)
+      (new Date(endDate) - new Date(startDate)) / (1000 * 60 * 60 * 24),
     );
     const totalPrice = nbNuits * existingCampsite.pricePerNight;
 
@@ -114,10 +114,17 @@ export async function getAllReservations(req, res, next) {
 
   try {
     const filtre = {};
+
+    if (req.user.role !== "admin") {
+      filtre.user = req.user.userId;
+    }
     if (status) filtre.status = status;
 
     //const reservations = await Reservation.find(filtre);
-    const reservations = await Reservation.find(filtre).populate("campsite", "name");
+    const reservations = await Reservation.find(filtre).populate(
+      "campsite",
+      "name",
+    );
 
     res.status(200).json({
       status: 200,
@@ -142,7 +149,14 @@ export async function getAllReservations(req, res, next) {
  */
 export async function getReservationById(req, res, next) {
   try {
-    const reservation = await Reservation.findById(req.params.id);
+    //const reservation = await Reservation.findById(req.params.id);
+    const filtre = { _id: req.params.id };
+
+    if (req.user.role !== "admin") {
+      filtre.user = req.user.userId;
+    }
+
+    const reservation = await Reservation.findOne(filtre);
 
     if (!reservation) {
       return res.status(404).json({
@@ -194,27 +208,28 @@ export async function updateReservation(req, res, next) {
       });
     }
 
-    if (req.user.role !== "admin" && reservation.user.toString() !== req.user.userId) 
-       {
-        return res.status(403).json({
-          status: 403,
-          error: "Forbidden",
-          path: req.originalUrl,
-          timestamp: new Date().toISOString(),
-          message: "Accès refusé",
-        });
-      }
+    if (
+      req.user.role !== "admin" &&
+      reservation.user.toString() !== req.user.userId
+    ) {
+      return res.status(403).json({
+        status: 403,
+        error: "Forbidden",
+        path: req.originalUrl,
+        timestamp: new Date().toISOString(),
+        message: "Accès refusé",
+      });
+    }
 
-      if (reservation.status !== "pending") {
-        return res.status(403).json({
-          status: 403,
-          error: "Forbidden",
-          path: req.originalUrl,
-          timestamp: new Date().toISOString(),
-          message: "Cette réservation  ne peut pas être modifiée",
-        });
-      }
-    
+    if (reservation.status !== "pending") {
+      return res.status(403).json({
+        status: 403,
+        error: "Forbidden",
+        path: req.originalUrl,
+        timestamp: new Date().toISOString(),
+        message: "Cette réservation  ne peut pas être modifiée",
+      });
+    }
 
     const { startDate, endDate, guests, campsite } = req.body;
 
@@ -260,7 +275,7 @@ export async function updateReservation(req, res, next) {
     }
 
     const nbNuits = Math.ceil(
-      (new Date(endDate) - new Date(startDate)) / (1000 * 60 * 60 * 24)
+      (new Date(endDate) - new Date(startDate)) / (1000 * 60 * 60 * 24),
     );
 
     reservation.campsite = campsiteId;
@@ -310,7 +325,10 @@ export async function updateStatutReservation(req, res, next) {
       });
     }
 
-    if (req.user.role !== "admin" && reservation.user.toString() !== req.user.userId) {
+    if (
+      req.user.role !== "admin" &&
+      reservation.user.toString() !== req.user.userId
+    ) {
       return res.status(403).json({
         status: 403,
         error: "NotFound",
@@ -339,7 +357,7 @@ export async function updateStatutReservation(req, res, next) {
     ];
 
     const estInvalide = transitionsInvalides.some(
-      (t) => t.from === reservation.status && t.to === status
+      (t) => t.from === reservation.status && t.to === status,
     );
 
     if (estInvalide) {
