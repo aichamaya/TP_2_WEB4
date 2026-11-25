@@ -159,12 +159,12 @@ export async function consulterProfil(req, res, next) {
  * @returns {Promise<void>} Réponse 200 avec le profil mis à jour, ou 404 si l'utilisateur est introuvable
  */
 export async function modifierProfil(req, res, next) {
-  const { firstName, lastName, phone, role } = req.body;
+  const { firstName, lastName, phone} = req.body;
 
   try {
     const updatedUser = await User.findByIdAndUpdate(
       req.user.userId,
-      { firstName, lastName, phone, role },
+      { firstName, lastName, phone},
       { new: true, runValidators: true }
     );
 
